@@ -1,0 +1,83 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocaServis</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "config": "./config.js"
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="app-container">
+        <header>
+            <h1>LocaServis</h1>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <nav class="menu">
+                <button onclick="openLogin()">Entrar</button>
+                <button onclick="openRegister()">Cadastro</button>
+                <button onclick="openAddService()">Cadastrar Serviço</button>
+            </nav>
+        </header>
+
+        <main>
+            <div class="search-bar">
+                <input type="text" placeholder="Pesquisar local...">
+                <button>Buscar</button>
+            </div>
+
+            <div id="map">
+                <!-- O mapa será inserido aqui pelo JavaScript -->
+                <p> Mapa Placeholder</p>
+            </div>
+        </main>
+
+        <!-- Modais -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeLogin()">&times;</span>
+                <h2>Entrar</h2>
+                <button>Entrar com o Google</button>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Senha">
+                <button>Entrar</button>
+            </div>
+        </div>
+
+        <div id="registerModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeRegister()">&times;</span>
+                <h2>Cadastro</h2>
+                <input type="text" placeholder="Nome">
+                <input type="text" placeholder="Sobrenome">
+                <input type="text" placeholder="Local do Estabelecimento">
+                <input type="file" accept="image/*">
+                <button>Cadastrar</button>
+            </div>
+        </div>
+
+        <div id="addServiceModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeAddService()">&times;</span>
+                <h2>Cadastrar Serviço</h2>
+                <input type="text" placeholder="Nome do Serviço">
+                <textarea placeholder="Descrição do Serviço"></textarea>
+                <button>Cadastrar</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 LocaServis. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

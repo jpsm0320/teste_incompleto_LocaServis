@@ -1,0 +1,221 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background: linear-gradient(to right, #f9e79f, #a9d6a3); /* Gradiente suave */
+    color: #333;
+    overflow-x: hidden; /* Evita rolagem horizontal */
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+header {
+    background-color: #2ecc71;
+    color: white;
+    padding: 1.5em;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.75em;
+    letter-spacing: 1px;
+}
+
+main {
+    padding: 2em;
+    flex: 1;
+}
+
+.search-bar {
+    display: flex;
+    margin-bottom: 2em;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 0.75em;
+    border: 2px solid #e67e22; /* Laranja */
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.search-bar button {
+    background-color: #e67e22;
+    color: white;
+    padding: 0.75em 1.25em;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #d35400;
+}
+
+#map {
+    height: 400px;
+    background-color: #ddd;
+    text-align: center;
+    line-height: 400px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Menu Estilos */
+.menu-icon {
+    font-size: 2em;
+    cursor: pointer;
+    padding: 0.5em;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.menu-icon:hover {
+    transform: rotate(90deg);
+}
+
+.menu {
+    position: absolute;
+    top: 4.5em;
+    right: 1em;
+    background-color: rgba(52, 152, 219, 0.95);
+    display: none;
+    flex-direction: column;
+    min-width: 180px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 1em;
+    text-align: left;
+    cursor: pointer;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+}
+
+.menu button:last-child {
+    border-bottom: none;
+}
+
+.menu button:hover {
+    background-color: rgba(41, 128, 185, 0.8);
+}
+
+.menu.active {
+    display: flex;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    overflow: auto;
+}
+
+.modal-content {
+    position: relative;
+    margin: 5% auto;
+    background-color: white;
+    padding: 2em;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal h2 {
+    margin-bottom: 1em;
+    color: #3498db;
+}
+
+.modal input,
+.modal textarea {
+    width: calc(100% - 20px);
+    padding: 0.75em;
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.modal button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.75em 1.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+    margin-top: 0.5em;
+}
+
+.modal button:hover {
+    background-color: #2980b9;
+}
+
+.close {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    font-size: 2em;
+    cursor: pointer;
+    color: #aaa;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #e74c3c;
+}
+
+/* Estilos adicionais para melhorar a aparência dos modais */
+#loginModal button:first-of-type {
+    background-color: #dd4b39; /* Cor do Google */
+    margin-bottom: 1em;
+}
+
+#loginModal button:first-of-type:hover {
+    background-color: #c63e2d;
+}
+
+#registerModal input[type="file"] {
+    margin-top: 0.5em;
+}
+
+#addServiceModal textarea {
+    height: 100px;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    font-size: 0.9em;
+}
